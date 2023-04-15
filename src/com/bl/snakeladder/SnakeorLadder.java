@@ -1,5 +1,6 @@
 package com.bl.snakeladder;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class SnakeorLadder {
@@ -8,23 +9,25 @@ public class SnakeorLadder {
         System.out.println("Welcome To Snake & Ladder Simulator");
 
         //Starting Positions;
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
 
-        int position = 0;
+        int positionfor1 = 0;
+        int positionfor2 = 0;
+        int turn = 1;
 
-        int[][] SnakeLadder = {{15, 22}, {14, 7}, {77, 32}, {95, 10}, {50, 32}};
 
-        while (position < 100){
+        while (positionfor1 < 100 && positionfor2 < 100) {
+            // Roll the dice and get the number of positions to move
+            int dice = random.nextInt(6) + 1;
+
+        {
 
             Scanner ab = new Scanner(System.in);
             System.out.println("Press Enter for Roll the Dice");
             ab.nextLine();
 
 
-            int dice = (int)(Math.random() * 6) + 1;
-            System.out.println("You Got: "+ dice);
-
-            position += dice;
-            System.out.println("You are at: "+ dice);
 
         }
 
