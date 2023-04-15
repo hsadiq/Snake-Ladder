@@ -52,8 +52,21 @@ public class SnakeorLadder {
                     }
                     break;
             }
+            // Update the player position
+            if (turn % 2 == 1) {
+                positionfor1 = playerPosition;
+            } else {
+                positionfor2 = playerPosition;
+            }
 
+            // Increment the turn counter
+            if (option == 1) {
+                turn--; // Player gets another turn
+            }
+            turn++;
         }
 
     }
+
 }
+
