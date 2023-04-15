@@ -19,15 +19,39 @@ public class SnakeorLadder {
 
         while (positionfor1 < 100 && positionfor2 < 100) {
             // Roll the dice and get the number of positions to move
-            int dice = random.nextInt(6) + 1;
+            int diceRoll = random.nextInt(6) + 1;
+            int playerPosition;
+            String playerName;
+            if (turn % 2 == 1) {
+                playerPosition = positionfor1;
+                playerName = "Player 1";
+            } else {
+                playerPosition = positionfor2;
+                playerName = "Player 2";
+            }
 
-        {
-
-            Scanner ab = new Scanner(System.in);
-            System.out.println("Press Enter for Roll the Dice");
-            ab.nextLine();
-
-
+            int option = random.nextInt(3);
+            switch (option) {
+                case 0:
+                    System.out.println(playerName + " rolled a " + diceRoll + " and got No Play.");
+                    break;
+                case 1:
+                    playerPosition += diceRoll;
+                    if (playerPosition > 100) {
+                        playerPosition -= diceRoll;
+                    } else {
+                        System.out.println(playerName + " rolled a " + diceRoll + " and got a Ladder. " + playerName + " moves to position " + playerPosition + ".");
+                    }
+                    break;
+                case 2:
+                    playerPosition -= diceRoll;
+                    if (playerPosition < 0) {
+                        playerPosition = 0;
+                    } else {
+                        System.out.println(playerName + " rolled a " + diceRoll + " and got a Snake. " + playerName + " moves to position " + playerPosition + ".");
+                    }
+                    break;
+            }
 
         }
 
