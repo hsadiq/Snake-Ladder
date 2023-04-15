@@ -24,7 +24,7 @@ public class SnakeorLadder {
             System.out.println("You Got: "+ dice);
 
             position += dice;
-            break;
+            System.out.println("You are at: "+ dice);
 
         }
 
