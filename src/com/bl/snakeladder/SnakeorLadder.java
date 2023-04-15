@@ -65,6 +65,18 @@ public class SnakeorLadder {
             }
             turn++;
         }
+        String winner;
+        if (positionfor1 >= 100) {
+            winner = "Player 1";
+        } else {
+            winner = "Player 2";
+        }
+
+        // Print the game summary
+        System.out.println(winner + " wins!");
+        System.out.println("Player 1 final position: " + positionfor1);
+        System.out.println("Player 2 final position: " + positionfor2);
+
 
     }
 
